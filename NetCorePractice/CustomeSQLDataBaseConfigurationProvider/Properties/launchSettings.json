@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Practice2": {
+    "CustomeConfigurationProvider": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
