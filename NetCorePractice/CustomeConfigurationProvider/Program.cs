@@ -22,7 +22,6 @@ namespace NS.CustomeConfigurationProvider
             Host.CreateDefaultBuilder(args).
                 ConfigureAppConfiguration((hostingContext, configurationBuilder) =>
                 {
-                    //var builder = configurationBuilder;
                     configurationBuilder.Sources.Clear();
                    
                     configurationBuilder.AddJsonFile("appsettings.json", true, true);
@@ -38,36 +37,5 @@ namespace NS.CustomeConfigurationProvider
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-
-
-        //public static IHostBuilder CreateDefaultBuilder(string[] args)
-        //{
-        //    var builder = new HostBuilder()
-        //      .UseContentRoot(Directory.GetCurrentDirectory())
-        //      .ConfigureHostConfiguration(config =>
-        //      {
-        //          // Configuration provider setup
-        //      })
-        //      .ConfigureAppConfiguration((hostingContext, config) =>
-        //      {
-        //          // Configuration provider setup
-        //      })
-        //      .ConfigureLogging((hostingContext, logging) =>
-        //      {
-        //          logging.AddConfiguration(
-        //            hostingContext.Configuration.GetSection("Logging"));
-        //          logging.AddConsole();
-        //          logging.AddDebug();
-        //      })
-        //      .UseDefaultServiceProvider((context, options) =>
-        //      {
-        //          var isDevelopment = context.HostingEnvironment
-        //                                     .IsDevelopment();
-        //          options.ValidateScopes = isDevelopment;
-        //          options.ValidateOnBuild = isDevelopment;
-        //      });
-
-        //    return builder;
-        //}
         }
     }
